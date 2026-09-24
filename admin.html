@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Power Fit</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+</head>
+
+<body data-page="admin">
+    <div class="container">
+        <header>
+            <div class="logo-box">POWER FIT</div>
+            <div class="title-box">PAINEL ADMINISTRATIVO</div>
+        </header>
+
+        <main class="admin-area">
+            <section class="admin-login" id="admin-login">
+                <span class="eyebrow">Acesso restrito</span>
+                <h1>Analytics da Power Fit</h1>
+                <p class="muted-text">Entre para consultar o fluxo do site e das redes sociais.</p>
+                <form id="admin-access-form">
+                    <label for="admin-password">Senha administrativa</label>
+                    <input id="admin-password" type="password" placeholder="Digite a senha" required>
+                    <button class="primary-action" type="submit">Entrar no painel</button>
+                    <p class="admin-hint">Demonstração local: powerfit-admin</p>
+                    <p class="form-status" id="admin-status" role="status"></p>
+                </form>
+            </section>
+
+            <section class="admin-dashboard is-hidden" id="admin-dashboard">
+                <div class="admin-heading">
+                    <div>
+                        <span class="eyebrow">Visão geral</span>
+                        <h1>Fluxo de acessos</h1>
+                    </div>
+                    <button class="secondary-action" id="admin-logout" type="button">Sair</button>
+                </div>
+
+                <div class="admin-metrics">
+                    <article><span>Visitas ao site</span><strong data-admin-total="totalVisits">0</strong></article>
+                    <article><span>Instagram</span><strong data-admin-total="instagram">0</strong></article>
+                    <article><span>Facebook</span><strong data-admin-total="facebook">0</strong></article>
+                    <article><span>YouTube</span><strong data-admin-total="youtube">0</strong></article>
+                    <article><span>WhatsApp</span><strong data-admin-total="whatsapp">0</strong></article>
+                    <article><span>Assistente IA</span><strong data-admin-total="ai">0</strong></article>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-heading">
+                        <div>
+                            <h2>Atividade dos últimos 14 dias</h2>
+                            <p class="muted-text">Visitas ao site e cliques nos canais de contato.</p>
+                        </div>
+                        <div class="chart-legend">
+                            <span><i class="legend-site"></i>Site</span>
+                            <span><i class="legend-instagram"></i>Instagram</span>
+                            <span><i class="legend-facebook"></i>Facebook</span>
+                            <span><i class="legend-youtube"></i>YouTube</span>
+                            <span><i class="legend-whatsapp"></i>WhatsApp</span>
+                            <span><i class="legend-ai"></i>IA</span>
+                        </div>
+                    </div>
+                    <canvas id="analytics-chart" aria-label="Gráfico de fluxo de acessos" role="img"></canvas>
+                </div>
+
+                <div class="admin-tools-grid">
+                    <section class="admin-tool-card">
+                        <span class="eyebrow">Conteúdo público</span>
+                        <h2>Adicionar resultado</h2>
+                        <p class="muted-text">A foto ficará disponível na vitrine do site neste navegador.</p>
+                        <form id="photo-upload-form">
+                            <label for="photo-file">Foto do resultado</label>
+                            <input id="photo-file" type="file" accept="image/*" required>
+                            <label for="photo-caption">Legenda</label>
+                            <input id="photo-caption" type="text" placeholder="Ex.: Evolução em 6 meses" maxlength="80">
+                            <button class="primary-action" type="submit">Publicar foto</button>
+                            <p class="form-status" id="photo-upload-status" role="status"></p>
+                        </form>
+                        <div id="admin-gallery-list" class="admin-gallery-list"></div>
+                    </section>
+
+                    <section class="admin-tool-card">
+                        <span class="eyebrow">Atendimento</span>
+                        <h2>Dúvidas dos clientes</h2>
+                        <p class="muted-text">Responda perguntas enviadas pela página de contato.</p>
+                        <div id="questions-list" class="questions-list"></div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
