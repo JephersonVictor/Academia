@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Fit | Início</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body {
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #000;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 20px;
+        }
+        .logo-box {
+            border: 3px solid #ffd700;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
+        }
+        .title-box {
+            border: 3px solid #ffd700;
+            flex-grow: 1;
+            padding: 15px 20px;
+            color: #ffd700;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .main-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        nav {
+            width: 220px;
+            flex-shrink: 0;
+            padding: 0 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        nav a {
+            display: block;
+            background: #e0e0e0;
+            color: #000;
+            text-decoration: none;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+        nav a:hover { background: #ffd700; }
+        .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .photo-card, .photo-card-large {
+            border: 3px solid #e53935;
+            background: #eee;
+            overflow: hidden;
+        }
+        .photo-card { height: 200px; }
+        .photo-card-large { height: 220px; }
+        .photo-card img, .photo-card-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .banner-call {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .banner-call h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .banner-call p { color: #ccc; }
+        .history-section { display: flex; flex-direction: column; gap: 10px; }
+        .history-title {
+            border: 2px solid #00aaff;
+            background: #00aaff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .history-content {
+            border: 3px solid #00aaff;
+            background: #33b5e5;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        @media (max-width: 850px) {
+            .main-layout { flex-direction: column; }
+            nav { width: 100%; }
+            .content-area { width: 100%; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; }
+            .logo-box, .title-box { width: 100%; text-align: center; }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body data-page="inicio">
+    <div class="container">
+        <header>
+            <div class="logo-box">POWER FIT</div>
+            <div class="title-box">POWER FIT ACADEMIA - TRANSFORMANDO VIDAS DESDE 2010</div>
+        </header>
+
+        <div class="main-layout">
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">INÍCIO</a></li>
+                    <li><a href="planos.html">PLANOS</a></li>
+                    <li><a href="modalidades.html">MODALIDADES</a></li>
+                    <li><a href="aulas.html">AULAS COLETIVAS</a></li>
+                    <li><a href="nutricao.html">NUTRIÇÃO</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                    <li><a href="aluno.html">ÁREA DO ALUNO</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-area">
+                <div class="gallery-grid" data-animate>
+                    <div class="photo-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Treino com barra">
+                    </div>
+                    <div class="photo-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Estrutura de pesos e pista">
+                    </div>
+                    <div class="photo-card" data-animate>
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Exercício kettlebell">
+                    </div>
+                </div>
+
+                <div class="photo-card-large" data-animate>
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1200&q=80" alt="Interior da academia">
+                </div>
+
+                <div class="banner-call" data-animate>
+                    <h3>AGENDE SUA AULA EXPERIMENTAL GRATUITA</h3>
+                    <p>Reserve seu horário e conheça nossa estrutura com um de nossos instrutores qualificados.</p>
+                </div>
+
+                <section class="history-section" data-animate>
+                    <div class="history-title">NOSSA TRAJETÓRIA: CONSTRUINDO RESULTADOS</div>
+                    <div class="history-content">
+                        Desde 2010, a Power Fit se dedica a transformar vidas através do fitness. Começamos com um sonho
+                        em uma pequena sala e hoje nos orgulhamos de ser a academia mais completa da região.
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-analytics" aria-label="Contador de visitantes">
+        <span class="analytics-dot"></span>
+        <span>visitantes</span>
+        <span class="analytics-number" id="visit-counter">0</span>
+    </div>
+
+    <div class="social-rail" aria-label="Redes sociais e contato">
+        <a class="social-button instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <span class="social-icon">◎</span>
+            <span class="social-badge" data-social-count="instagram">0</span>
+        </a>
+        <a class="social-button facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <span class="social-icon">f</span>
+            <span class="social-badge" data-social-count="facebook">0</span>
+        </a>
+        <a class="social-button youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <span class="social-icon">▶</span>
+            <span class="social-badge" data-social-count="youtube">0</span>
+        </a>
+        <a class="social-button whatsapp" href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20aula%20experimental!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <span class="social-icon">W</span>
+            <span class="social-badge" data-social-count="whatsapp">0</span>
+        </a>
+        <button class="social-button ai" id="chat-trigger" type="button" aria-label="Assistente IA">
+            <span class="social-icon">AI</span>
+            <span class="social-badge" data-social-count="ai">0</span>
+        </button>
+    </div>
+
+    <div class="chat-widget" id="chat-widget" aria-live="polite">
+        <div class="chat-header">
+            <span>Assistente IA</span>
+            <button class="chat-close" id="chat-close" type="button" aria-label="Fechar assistente">×</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Olá! Posso responder sobre planos, aulas e horários da Power Fit.</div>
+        </div>
+        <form class="chat-form" id="chat-form">
+            <input id="chat-input" type="text" placeholder="Pergunte algo..." aria-label="Digite sua pergunta" />
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
